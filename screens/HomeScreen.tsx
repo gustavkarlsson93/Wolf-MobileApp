@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import Agent from "../actions/Agent";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
-import { FlatList } from "react-native";
+import { FlatList, Text } from "react-native";
 
 const HomeScreen = () => {
   const { isLoading, error, data } = useQuery({
@@ -15,7 +15,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      <text>Klubbar</text>
+      <Text>Klubbar</Text>
       {data &&
         data.clubs.map((club) => (
           <FlatList

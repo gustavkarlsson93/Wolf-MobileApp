@@ -1,15 +1,21 @@
-import Lottie from "lottie-react-native";
+import LottieView from "lottie-react-native";
+import React from "react";
+import { View, Text } from "react-native";
 
-const Error = () => {
+const ErrorLottie = () => {
   return (
-    <view className="rowRounded">
-      <Lottie
-        source={require("../assets/lottie/error-dialog.json")}
+    <View>
+      <LottieView
         autoPlay
-        loop
+        style={{
+          width: 400,
+          height: 400,
+        }}
+        // Find more Lottie files at https://lottiefiles.com/featured
+        source={require("../assets/lottie/error.json")}
       />
-    </view>
+    </View>
   );
 };
 
-export default Error;
+export default ErrorLottie;

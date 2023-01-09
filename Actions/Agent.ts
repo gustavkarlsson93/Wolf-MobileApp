@@ -1,7 +1,7 @@
-import axios, { AxiosResponse } from "Axios";
+import axios, { AxiosResponse } from "axios";
 import { ClubsResponse } from "../models/clubs/ClubsResponse";
 
-axios.defaults.baseURL = "https://localhost:7288";
+axios.defaults.baseURL = "http://localhost:5202/api/";
 
 const responseBody = (response: AxiosResponse) => response.data;
 
@@ -16,7 +16,7 @@ const requests = {
 
 const Club = {
   All: (params?: URLSearchParams) =>
-    requests.get<ClubsResponse>("GetAllClubs", params),
+    requests.get<ClubsResponse>("/GetAllClubs", params),
 };
 
 const agent = {

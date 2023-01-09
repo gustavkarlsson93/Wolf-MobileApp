@@ -1,14 +1,20 @@
-import Lottie from "lottie-react-native";
+import LottieView from "lottie-react-native";
+import React from "react";
+import { View, Text } from "react-native";
 
 const Loader = () => {
   return (
-    <view className="rowRounded">
-      <Lottie
-        source={require("../assets/lottie/holeymoley-inpage-loader.json")}
+    <View>
+      <LottieView
         autoPlay
-        loop
+        style={{
+          width: 400,
+          height: 400,
+        }}
+        // Find more Lottie files at https://lottiefiles.com/featured
+        source={require("../assets/lottie/holeymoley-inpage-loader.json")}
       />
-    </view>
+    </View>
   );
 };
 
