@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import Agent from "../actions/Agent";
+import Agent from "../Actions/Agent";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { FlatList, Text } from "react-native";
